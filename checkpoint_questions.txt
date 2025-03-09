@@ -1,0 +1,158 @@
+Group 1:
+* only1
+https://github.com/01-edu/public/blob/master/subjects/only1/README.md
+* onlya
+https://github.com/01-edu/public/blob/master/subjects/onlya/README.md
+* onlyb
+https://github.com/01-edu/public/blob/master/subjects/onlyb/README.md
+* onlyf
+https://github.com/01-edu/public/blob/master/subjects/onlyf/README.md
+* onlyz
+https://github.com/01-edu/public/blob/master/subjects/onlyz/README.md
+
+
+
+Group 2:
+* checknumber
+https://github.com/01-edu/public/blob/master/subjects/checknumber/README.md
+* countalpha
+https://github.com/01-edu/public/blob/master/subjects/countalpha/README.md
+* countcharacter
+https://github.com/01-edu/public/blob/master/subjects/countcharacter/README.md
+* printif
+https://github.com/01-edu/public/blob/master/subjects/printif/README.md
+* printifnot
+https://github.com/01-edu/public/blob/master/subjects/printifnot/README.md
+* rectperimeter
+https://github.com/01-edu/public/blob/master/subjects/rectperimeter/README.md
+* retainfirsthalf
+https://github.com/01-edu/public/blob/master/subjects/retainfirsthalf/README.md
+
+
+
+
+Group 3:
+* cameltosnakecase
+https://github.com/01-edu/public/blob/master/subjects/cameltosnakecase/README.md
+* digitlen
+https://github.com/01-edu/public/blob/master/subjects/digitlen/main.go
+* firstword
+https://github.com/01-edu/public/blob/master/subjects/firstword/README.md
+* fishandchips
+https://github.com/01-edu/public/blob/master/subjects/fishandchips/README.md
+* gcd
+https://github.com/01-edu/public/blob/master/subjects/gcd/README.md
+* hashcode
+https://github.com/01-edu/public/blob/master/subjects/hashcode/README.md
+* lastword
+https://github.com/01-edu/public/blob/master/subjects/lastword/README.md
+* repeatalpha
+https://github.com/01-edu/public/blob/master/subjects/repeatalpha/README.md
+* searchreplace
+https://github.com/01-edu/public/blob/master/subjects/searchreplace/README.md
+
+
+
+Group 4:
+* cleanstr
+https://github.com/01-edu/public/blob/master/subjects/cleanstr/README.md
+* expandstr
+https://github.com/01-edu/public/blob/master/subjects/expandstr/README.md
+* findprevprime
+https://github.com/01-edu/public/blob/master/subjects/findprevprime/README.md
+* fromto
+https://github.com/01-edu/public/blob/master/subjects/fromto/README.md
+* iscapitalized
+https://github.com/01-edu/public/blob/master/subjects/iscapitalized/README.md
+* itoa
+https://github.com/01-edu/public/blob/master/subjects/itoa/README.md
+* printmemory
+https://github.com/01-edu/public/blob/master/subjects/printmemory/README.md
+* printrevcomb
+https://github.com/01-edu/public/blob/master/subjects/printrevcomb/README.md
+* thirdtimeisacharm
+https://github.com/01-edu/public/blob/master/subjects/thirdtimeisacharm/README.md
+* weareunique
+https://github.com/01-edu/public/blob/master/subjects/weareuniqueREADME.md
+* zipstring
+https://github.com/01-edu/public/blob/master/subjects/zipstring/README.md
+
+
+
+Group 5:
+* addprimesum
+https://github.com/01-edu/public/blob/master/subjects/addprimesum/README.md
+* canjump
+https://github.com/01-edu/public/blob/master/subjects/canjump/README.md
+* chunk
+https://github.com/01-edu/public/blob/master/subjects/chunk/README.md
+* concatalternate
+https://github.com/01-edu/public/blob/master/subjects/concatalternate/README.md
+* concatslice
+https://github.com/01-edu/public/blob/master/subjects/concatslice/README.md
+* fprime
+https://github.com/01-edu/public/blob/master/subjects/fprime/README.md
+* hiddenp
+https://github.com/01-edu/public/blob/master/subjects/hiddenp/README.md
+* inter
+https://github.com/01-edu/public/blob/master/subjects/inter/README.md
+* reversestrcap
+https://github.com/01-edu/public/blob/master/subjects/reversestrcap/README.md
+* saveandmiss
+https://github.com/01-edu/public/blob/master/subjects/saveandmiss/README.md
+* union
+https://github.com/01-edu/public/blob/master/subjects/union/README.md
+* wdmatch
+https://github.com/01-edu/public/blob/master/subjects/wdmatch/README.md
+
+
+
+Group 6:
+* fifthandskip
+https://github.com/01-edu/public/blob/master/subjects/fifthandskip/README.md
+* notdecimal
+https://github.com/01-edu/public/blob/master/subjects/notdecimal/README.md
+* revconcatalternate
+https://github.com/01-edu/public/blob/master/subjects/revconcatalternate/README.md
+* slice
+https://github.com/01-edu/public/blob/master/subjects/slice/README.md
+
+
+
+Group 7:
+* findpairs
+https://github.com/01-edu/public/blob/master/subjects/findpairs/README.md
+* revwstr
+https://github.com/01-edu/public/blob/master/subjects/revwstr/README.md
+* rostring
+https://github.com/01-edu/public/blob/master/subjects/rostring/README.md
+* wordflip
+https://github.com/01-edu/public/blob/master/subjects/wordflip/README.md
+
+
+
+Group 8:
+* itoabase
+https://github.com/01-edu/public/blob/master/subjects/itoabase/README.md
+* options
+https://github.com/01-edu/public/blob/master/subjects/options/README.md
+* piglatin
+https://github.com/01-edu/public/blob/master/subjects/piglatin/README.md
+* romannumbers
+https://github.com/01-edu/public/blob/master/subjects/romannumbers/README.md
+
+
+
+Group 9:
+* brackets
+https://github.com/01-edu/public/blob/master/subjects/brackets/README.md
+* roncalc
+https://github.com/01-edu/public/blob/master/subjects/roncalc/README.md
+
+
+
+Group 10:
+* brainfuck
+https://github.com/01-edu/public/blob/master/subjects/brainfuck/README.md
+* grouping
+https://github.com/01-edu/public/blob/master/subjects/grouping/README.md

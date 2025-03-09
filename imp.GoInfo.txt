@@ -1,0 +1,243 @@
+1. What is go?
+
+-------- open source programming language
+-------- extremely popular bcz of focus on simplicity, clarity n scalability
+-------- high performance n focus on concurrency 
+-------- built-in a lot features (don't have to run to 3rd party libraries )
+-------- static typing (allows to catch many errors early during development stage instead of whilst testing application)
+-------- in go, variables, constants n values that are declared in a function are scoped to that function
+-------- you can define your own types in GO to some extent(I'm talking bout structs etc)(u do that using type keyword typically outside the functions)
+
+2. Why Packages are important? Why do they matter?
+
+-------- when writing go code, we split our code across packages
+-------- need at least one package per application but can have multiple packages
+-------- single package can also be split across multiple files
+-------- can have multiple packages In one GO project 
+-------- What is the idea behind these packages? its simply to organize your code
+-------- we can export n import features across our files sp that individual files stay lean
+
+3. FMT package purpose/ used for
+
+------- something we can execute to output some text on the screen 
+------- its a built-in package which we r importing so we can use this feature for executing some output on screen
+------- this package is not supposed to be executed as a program, instead we just import it into another GO module, into another GO project, so that we can use funcs from that package in our package (in our program)
+------- getting a value form the user is really easy in GO bcz of the fmt package that we import, it does not just provide  functions for outputting something to terminal  but also functions to get input from the terminal so to allow the user to enter the values in the terminal
+
+
+4. The importance of the name "main"
+
+package main:
+------- special package name that tells GO that this package will be the main  entry point of the application that we r building
+-------- why does this matter? bcz we'll not always use go run (as I did in my application) n point at the file that should be executed but thas not the only way of executing the code 
+-------- n that's not how u will execute your code once u build it for production n make it available for other ppl
+
+func main:
+-------- just as the package must be named main so that GO know where our application starts, the func must be named main so that go knows which code to execute when the application starts
+-------- if we have a second GO file, which also belongs to the main package that file must not have a main func otherwise we will have 2 main func belonging to the same package n it will give us an error
+
+
+ 5. Understanding Go Modules & Building Go Programs
+
+-------- GO does not just know packages but also modules  
+-------- 1 module consists of multiple packages
+
+6. Type Conversions & Explicit Type Assignment
+
+--------- GO doesn't allow us to mix diff types 
+
+7. Using Alternative Variable Declaration Styles
+
+--------- " := " is a shortcut offered by GO, which should be used as often as possible. That's the convention n recommendation to declare n assign a variable
+ --------- another thing that we can do in GO is that we can declare n assign multiple variables in the same line
+
+8. Understanding the Importance Of Variables
+
+--------- key diff bw const n var is that variables can be reassigned 
+
+9.  FMT.SCAN()
+
+--------- The fmt.Scan() function is a great function for easily fetching & using user input through the command line.
+-------- But this function also has an important limitation: You can't (easily) fetch multi-word input values. Fetching text that consists of more than a single word is tricky with this function.
+
+10. Creating Formatted Strings
+
+--------- Sometimes when we don't wanna output the text in the console immediately but instead we wanna format it, change it n store it in a variable.
+--------- All the functions that start w Printf or Println n Print wouldn't allow u to do that bcz these would immediately output the text in the console 
+--------- If we wanna generate a new string which we can store in a variable, we can use Sprint or Sprintf(if we wanna use a formatting feature) n Sprintln(if we don't wanna format the text but want a line break)
+
+10. Understanding Functions
+
+--------- code on demand blocks (bcz the idea behind the function is that you define some code which is only executed at the time where the function(eg main-function) is called )
+--------- so code of demand means that it is only executed when the function is called
+--------- not limited to built-in functions only, can build additional functions as well
+--------- function name should define what the function does
+--------- for the function to be useful, it should accept some input argument 
+
+11. Functions: Return Values & Variable Scope
+
+-------- they don't have to accept parameters if we don't need any input value
+-------- they can in addition produce values n return values
+-------- we can build our function that returns a value 
+-------- 
+
+12. Writing To Files
+
+--------- we don't store values just in a variable n therefore, in memory as long as the application runs n we lose it thereafter, but instead we store it in a file, so that we can reuse it everytime the application starts
+--------- "0644" permission notation you will encounter from time to time in programming n when working w operating systems, especially Linux, bcz this is a way of encoding file permissions n it means that the owner will of the file will be able to read n write the file whereas other users can only read the file
+
+13. Reading From Files
+
+--------- previously we learned how to write n store data into file now we will learn how to extract data from a file
+--------- reads data, reads data from file and returns two values
+
+14. Handling Errors
+
+-------- in GO, functions are written such that errors don't crash the application
+-------- if err != nil now nil is a special value in GO. It stands for the absence of a useful value
+-------- err will be nil if we have no error
+
+15. Structs
+
+What is Struct?
+--------- They are structures that allow you to group related data together into 1 single value
+
+---------  Which Problem Do Structs Solve? when applications become more complex you might wanna group related data together  into one value instead of couple of individual variables so that working with that data becomes easier n passing that data around becomes easier as well
+
+Alternative Struct Literal Notation & Struct Null Values:
+--------- First, if you are assigning all the key values eg 
+    
+	appUser = user {
+    firstName:  userFirstName,
+    lastName: userLastName,
+    birthDate: userBirthdate,
+    createdAt: time.Now(),
+} 
+in the order in which they were defined in the struct blueprint (
+
+type user struct{
+// struct body is called fields
+firstName string 
+lastName string
+birthDate string
+createdAt time.Time}
+) then we can omit the key n just specify values e.g 
+
+appUser = user {
+  userFirstName,
+   userLastName,
+    userBirthdate,
+    time.Now(),
+} 
+but u have to make sure that the order is the same as the blueprint
+
+--------- The other thing u should know is that you can also create an empty struct eg 
+                              appUser = user{}
+
+16. Methods 
+
+--------- Structs are pretty useful for combining data n for grping related data together but it is not all to structs instead you can also attach functions to structs  n the function that is attached to struct is called a Method
+
+Receiver 
+------- func (u user) outputUserDetails() {} specified in front of the func name
+
+Mutation Methods
+------- Now wen adding methods to structs in GO, you r not limited to adding methods that output struct data but u can also add methods that change data in the struct
+
+------- wen u define methods that edit a struct, you should not accept destruct as a value like this func (u user) clearUserName() but as a pointer func (u *user) clearUserName() 
+
+17. Using Creation / Constructor Functions
+ 
+------- In addition to methods. there also is a special func that you can create when working w structs tho that func is really just a pattern that's often used writing GO code instead of a feature baked into language as methods are , which is called  Creation / Constructor Function
+------- It is simply a utility function that takes care of creating a struct so that you don't have to create it like this 
+         appUser = user {
+                firstName:  userFirstName,
+		lastName: userLastName,
+		birthDate: userBirthdate,
+                createdAt: time.Now(),
+	}
+which you can do.
+
+ Exposing Methods & A Different Constructor Function Name
+-------- casing matter also for the fields inside of a struct 
+
+Struct Embedding
+--------- The idea is simply that you build a new struct that builds up on an existing struct
+
+Struct Tags
+--------- They are essentially metadata that you can add to ur struct fields n then that metadata can be picked by any code or package that cares about it
+-------- by default, tags wont do anything if u don't have some code or package that picks up that metadata
+
+18. Interface
+
+--------- An interface is essentially a contract that a certain value, typically a struct, has a certain method
+-------- You can't add a function body in interface bcz interfaces are not about defining the logic of the method but instead, they simply define that a certain method exists 
+-------- there is a convention in GO that if u build an interface that defines only one method then you interface is that method name + an "er" eg
+                                 type saver interface {
+	                Save() error 
+                         }
+ -------- An interface even tho it is has no logic is a type which means you can use it anywhere where the type is needed                    
+
+19. Slice 
+-------- Sometimes you need a subset of an array, a part of an array. More than one value, but not the entire array
+-------- Slices can also be created on other slices
+-------- If you modify an element in a slice, you would modify the same element in the original array
+-------- When you create a slice, you don't copy the original array. You still have the original/one array in the memory n your slice is just a tiny reference to the part of that array 
+-------- The imp thing to understand about slices is that we can always select more towards the end of the array but not towards the start, or towards the left.
+-------- If you don't specify the number of items that should be stored in an array bw the [], GO will automatically create a slice for you n since a slice always is based on an array, it will also create an array for you bts but it will automatically ditch that array and create a new array if your slice grows beyond the balance of that bts stored array
+-------- Append: it tells GO that we want to add an item to a slice n therefore also to the underlying array. now of course, array has a fixed length so what GO will do in this case is it will create a brand new array n add that item/element to new array which is created such that is has capacity for that new array
+---------- Append does not take one value that is appended instead you can append as many values as you want
+---------- ... is an imp syntax that allows you to pull out all the elements of a list n use them as separate elements in a place
+
+20. Maps
+
+-------- A map is a different kind of data structure which you can also use to group data together
+-------- Both the map key n value stored under a certain key can be of various value types
+
+
+                                   Difference bw Maps n Structs
+--------- for maps you can use anything as a key    |   -------- with structs, we have pre-defined data structures
+-------- whenever you have a collection of values where you want to have custom labels to identify those values , map is your choice
+-------- you don't use structs to manage multiple values of same kind w diff keys, but instead you use structs to describe data entities in your program
+--------- map on other hand is used if you have collection of values which probably describes the same thing 
+--------- When u assign your own labels, your own keys, n use any kinds of values for those keys that makes sense to you 
+                ---------------- in a nutshell, you can think of maps as arrays where you don't use indexes, but instead any labels of your choice
+
+
+21. Deep dive into functions
+
+--------- What is a function? piece of code that we can execute on demand
+--------- what we didn't learn till now was that we can use functions as parameter values for other functions
+
+
+go run/ go build method
+------- go run is only suitable for tiny scripts
+------- go run runs the go code in the file we pass in n that's all it does while go build builds a production executable 
+-------- do we need to put code inside our GOPATH? NO, it shouldn't be put bcz the modules is what replaced the old go 
+-------- what does "go install" do? Compiles  n installs the program locally  
+-------- code must be complied w "go build" before running "go install"? False
+-------- go build is a useful command bcz it checks for compile time errors
+-------- should you export code from the main package? main package ain't a library so no need to export functions from it
+-------- when should you NOT export a function, variable, or type? when the end-user doesn't need to know about it
+
+
+git repository
+------- module repository or git repository is just a collection of code that you keep in Source control 
+------- It can contain 1 or more modules 
+------- tho it's common for a single repository to just have a single go module 
+
+go ecosystem
+------- There is no central location for 3rd part packages like js or python has
+------- Instead, it works on top of git n uses the import path as remote URL 
+------- Do packages in the standard library have a module path prefix? No
+------- When we import a package from the git repository, we just import from a root path eg " github.com/wagslane/go-rabbitmq"  bcz the root package is what we r importing
+------- What is an import path? A module path + package subdirectory 
+------- Should we put our code inside the GOPATH? no we shouldn't put bcz the entire idea of go modules is what replaced the old go path 
+------- Why does go include a remote URL in module paths? To simplify remote downloading of packages
+-------- We build compiled executables that can execute anywhere 
+--------- To export a function in go , we need to capitalize the first letter
+
+
+SQL 
+-------- SQL stands for Structured Query Language
+-------- SQL lets you access and manipulate data
